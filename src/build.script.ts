@@ -2,6 +2,8 @@ import { promises as fs } from 'fs';
 import * as path from 'path';
 import { Glob } from 'bun';
 
+const ROOT = path.join(import.meta.dir, '..');
+
 interface Snippet {
     prefix: string | string[];
     body: string[];
@@ -67,14 +69,17 @@ async function processFile(filePath: string) {
     const outName = `snippets-${fileName}.json`;
     const outPath = path.join(import.meta.dir, '../snippets', outName);
     await fs.writeFile(outPath, JSON.stringify(snippets, null, 2), 'utf-8');
-    console.log(`Generated: ${outPath}`);
+    
+    console.log(`   - Generated: ${path.relative(ROOT, outPath)}`);
 }
 
 async function run() {
     const globber = new Glob(path.join(import.meta.dir, '/snippets/*.md'));
 
     for await (const filePath of globber.scan()) {
-        console.log(`> Processing snippets from: ${filePath}`);
+        const relativeFilePath = path.relative(ROOT, filePath);
+        
+        console.log(`📄 Processing snippets from: ${relativeFilePath}`);
         await processFile(filePath);
     }
 }
