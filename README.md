@@ -7,5 +7,5 @@
 
 ## Snippets
 
-- [TypeScript and React Typescript Snippets](http://github.com/lucodedev/snippets/blob/main/src/snippets/ts.md)
+- [TypeScript and React Typescript Snippets](https://github.com/lucodedev/snippets/blob/master/src/snippets/ts.md)
 
