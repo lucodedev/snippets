@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+      ".git": true,
+      ".vscode": true,
+      "node_modules": true,
+      ".prettier*": true,
+      "bun.lock": true,
+      "*.code-workspace": true,
+      "LICENSE": true,
+      ".vscodeignore": true,
+      ".gitignore": true,
+  }
+}

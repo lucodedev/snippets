@@ -1,0 +1,84 @@
+{
+  "Print to console": {
+    "prefix": [
+      "cons",
+      "clog"
+    ],
+    "body": [
+      "console.log('$0');"
+    ],
+    "description": "Simple 'console.log();' print"
+  },
+  "Print a warning to console": {
+    "prefix": "cwarn",
+    "body": [
+      "console.warn('$0');"
+    ],
+    "description": "Simple 'console.warn();' print"
+  },
+  "Print an error to console": {
+    "prefix": [
+      "cerror",
+      "cerr"
+    ],
+    "body": [
+      "console.error('$0');"
+    ],
+    "description": "Simple 'console.error();' print"
+  },
+  "React component boilerplate": {
+    "prefix": [
+      "comp",
+      "cmp"
+    ],
+    "body": [
+      "import { type ComponentProps } from 'react';",
+      "",
+      "export type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props = ComponentProps<'${2:div}'>;",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) => {",
+      "    return (",
+      "        <${2:div} className={className} {...props}>",
+      "            $0",
+      "        </${2:div}>",
+      "    )",
+      "};",
+      "",
+      "export { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} };"
+    ],
+    "description": "Create an arrow function react component"
+  },
+  "cva+react component boilerplate": {
+    "prefix": [
+      "compcva",
+      "compv",
+      "compvar",
+      "cmpv"
+    ],
+    "body": [
+      "import { type VariantProps, cva } from 'class-variance-authority';",
+      "import { type ComponentProps } from 'react';",
+      "import { cn } from '@/lib/utils';",
+      "",
+      "type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props = ComponentProps<'${2:div}'> & VariantProps<typeof variants>;",
+      "",
+      "const variants = cva('', {",
+      "    variants: {}",
+      "});",
+      "",
+      "const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) => {",
+      "    return (",
+      "        <${2:div}",
+      "            className={cn(variants({}), className)}",
+      "            {...props}",
+      "        >",
+      "            $0",
+      "        </${2:div}>",
+      "    )",
+      "};",
+      "",
+      "export { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}, type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props };"
+    ],
+    "description": "Create an arrow function react component using `class-variance-authority`"
+  }
+}

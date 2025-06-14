@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+bun.lock
+package-lock.json
+out/
+
+# OS
+.DS_Store
+Thumbs.db

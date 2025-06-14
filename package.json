@@ -1,0 +1,66 @@
+{
+    "name": "lucode-snippets",
+    "displayName": "Lucode's snippets",
+    "description": "Highly opinionated snippet bundle for many languages and use-cases",
+    "version": "0.0.1",
+    "icon": "logo.png",
+    "license": "MIT",
+    "scripts": {
+        "vscode:prepublish": "bun run build",
+        "build": "bun ./src/build.script.ts"
+    },
+    "publisher": "lucaslabs",
+    "author": {
+        "name": "Lucas Colombo",
+        "email": "lucas@lucode.dev",
+        "url": "https://lucode.dev"
+    },
+    "homepage": "https://github.com/lucodedev/vscode-snippets/blob/main/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lucodedev/vscode-snippets.git"
+    },
+    "bugs": {
+        "url": "https://github.com/lucodedev/vscode-snippets/issues"
+    },
+    "galleryBanner": {
+        "color": "#11131c",
+        "theme": "dark"
+    },
+    "keywords": [
+        "Lucode",
+        "Snippets",
+        "React Snippets",
+        "Rust Snippets",
+        "JavaScript Snippets"
+    ],
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "capabilities": {
+        "untrustedWorkspaces": {
+            "supported": true
+        },
+        "virtualWorkspaces": true
+    },
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/snippets-ts.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets-ts.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/bun": "^1.2.16",
+        "@types/vscode": "^1.75.0",
+        "typescript": "^5.8.3"
+    }
+}

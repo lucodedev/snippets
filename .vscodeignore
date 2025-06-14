@@ -1,0 +1,15 @@
+# Files to include in the extension package
+# Documentation for this format:
+# https://code.visualstudio.com/api/working-with-extensions/publishing-extension#using-.vscodeignore
+
+# Files for vscode extension
+!LICENSE
+!README.md
+!logo.png
+!package.json
+
+# Snippets
+!snippets
+
+# Exclude everything else
+**/*
