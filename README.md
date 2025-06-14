@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/lucodedev/snippets/main/logo.png" alt="logo" width="200">
+  <img src="https://raw.githubusercontent.com/lucodedev/snippets/refs/heads/master/logo.png" alt="logo" width="200">
 
   # lucode-snippets
 </div>
