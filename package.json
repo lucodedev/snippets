@@ -15,13 +15,13 @@
         "email": "lucas@lucode.dev",
         "url": "https://lucode.dev"
     },
-    "homepage": "https://github.com/lucodedev/vscode-snippets/blob/main/README.md",
+    "homepage": "https://github.com/lucodedev/snippets/blob/main/README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/lucodedev/vscode-snippets.git"
+        "url": "https://github.com/lucodedev/snippets.git"
     },
     "bugs": {
-        "url": "https://github.com/lucodedev/vscode-snippets/issues"
+        "url": "https://github.com/lucodedev/snippets/issues"
     },
     "galleryBanner": {
         "color": "#11131c",
