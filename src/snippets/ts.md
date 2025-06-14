@@ -2,7 +2,7 @@
 title: TypeScript and React Typescript Snippets
 ---
 
----
+# Typescript / JavaScript Snippets
 
 ## `cons,clog`: Print to console
 
@@ -32,7 +32,7 @@ console.warn('$0');
 console.error('$0');
 ```
 
----
+# React Snippets
 
 ## `comp,cmp`: React component boilerplate
 
@@ -83,4 +83,47 @@ const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }
 };
 
 export { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}, type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props };
+```
+
+# React Hooks Snippets
+
+## `usest,useSt,usestate,useState`: React useState hook
+
+> Create a useState hook with type inference
+
+```tsx
+const [${1:var}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:undefined});$0
+```
+
+---
+
+## `useef,useEff,useEffect`: React useEffect hook
+
+> Create a useEffect hook with type inference
+
+```tsx
+useEffect(() => {
+    $1
+    return () => {$2}
+}, [${3}]);$0
+```
+
+## `memo,usem,usemem,usememo,useM,useMem,useMemo`: React useMemo hook
+
+> Create a useMemo hook with type inference
+
+```tsx
+const ${1:memoized} = useMemo(() => {
+    return $2;
+}, [${3}]);$0
+```
+
+## `usec,useC,usecall,useCall,useCa,useCallb,useCallback`: React useCallback hook
+
+> Create a useCallback hook with type inference
+
+```tsx
+const ${1:callback} = useCallback(() => {
+    $2
+}, [${3}]);$0
 ```
