@@ -2,7 +2,7 @@
     "name": "lucode-snippets",
     "displayName": "Lucode's snippets",
     "description": "Highly opinionated snippet bundle for many languages and use-cases",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icon": "logo.png",
     "license": "MIT",
     "scripts": {
