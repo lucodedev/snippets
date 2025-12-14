@@ -63,26 +63,56 @@ export { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} };
 ```tsx
 import { type VariantProps, cva } from 'class-variance-authority';
 import { type ComponentProps } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '${1:@/lib/utils}';
 
-type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props = ComponentProps<'${2:div}'> & VariantProps<typeof variants>;
+type ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props = ComponentProps<'${3:div}'> & VariantProps<typeof variants>;
 
 const variants = cva('', {
     variants: {}
 });
 
-const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }: ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) => {
+const ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }: ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) => {
     return (
-        <${2:div}
+        <${3:div}
             className={cn(variants({}), className)}
             {...props}
         >
             $0
-        </${2:div}>
+        </${3:div}>
     )
 };
 
-export { ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}, type ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props };
+export { ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}, type ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props };
+```
+
+## `comptv,compt,cmptv,cmpt,`: tailwind-variants+react component boilerplate
+
+> Create an arrow function react component using `tailwind-variants`
+
+```tsx
+import { type VariantProps, tv } from 'tailwind-variants';
+import { type ComponentProps } from 'react';
+import { cn } from '${1:@/lib/utils}';
+
+type ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props = ComponentProps<'${3:div}'> & VariantProps<typeof variants>;
+
+const variants = tv({
+    base: '',
+    variants: {}
+});
+
+const ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = ({ className, ...props }: ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props) => {
+    return (
+        <${3:div}
+            className={cn(variants({}), className)}
+            {...props}
+        >
+            $0
+        </${3:div}>
+    )
+};
+
+export { ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}, type ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props };
 ```
 
 # React Hooks Snippets
